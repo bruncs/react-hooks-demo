@@ -1,7 +1,4 @@
-import React from "react";
+import corporate from "./corporate";
+import dawn from "./dawn";
 
-const ThemeContext = ({ theme }) => {
-  return null;
-};
-
-export default ThemeContext;
+export { corporate, dawn };
