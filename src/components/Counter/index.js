@@ -9,7 +9,7 @@ const Counter = () => {
 
   return (
     <div>
-      <h3>Counter using useState hook</h3>
+      <h3>Counter</h3>
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
