@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import ThemeContext from "../../themes";
 import { Container } from "./styles";
 
-const Counter = ({ theme }) => {
+const Counter = ({ context }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     document.title = `You clicked ${count} times`;
-    console.log(theme);
   });
 
+  const { background, color } = context.theme;
+
   return (
-    <Container background={theme.theme.background}>
+    <Container background={background} color={color}>
       <h3>Counter</h3>
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
