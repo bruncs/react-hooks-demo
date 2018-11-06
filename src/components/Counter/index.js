@@ -9,13 +9,15 @@ const Counter = ({ context }) => {
   });
 
   const { background, color } = context.theme;
-  const { title } = context.locale;
+  const { title, messageStart, messageEnd, buttonCaption } = context.locale;
 
   return (
     <Container background={background} color={color}>
       <h3>{title}</h3>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <p>
+        {messageStart} {count} {messageEnd}
+      </p>
+      <button onClick={() => setCount(count + 1)}>{buttonCaption}</button>
     </Container>
   );
 };

@@ -7,7 +7,7 @@ import Counter from "./components/Counter";
 
 class App extends Component {
   state = {
-    locale: locales.en,
+    locale: locales.ptbr,
     theme: themes.corporate
   };
 
@@ -22,7 +22,6 @@ class App extends Component {
                 <ThemeContext.Consumer>
                   {theme => (
                     <Fragment>
-                      <Counter context={{ locale: locale.Counter, theme }} />
                       <Counter context={{ locale: locale.Counter, theme }} />
                     </Fragment>
                   )}
