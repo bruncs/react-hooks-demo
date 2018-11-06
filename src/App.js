@@ -12,7 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <ThemeContext.Provider value={this.state}>
-          <ThemeContext.Consumer>{theme => <Counter />}</ThemeContext.Consumer>
+          <ThemeContext.Consumer>
+            {theme => <Counter theme={theme} />}
+          </ThemeContext.Consumer>
         </ThemeContext.Provider>
       </div>
     );
