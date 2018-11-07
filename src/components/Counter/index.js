@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "./styles";
+import { Section, Title, Message, Button } from "./styles";
 
 const Counter = ({ context }) => {
   const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
-
-  const { background, color } = context.theme;
+  const { foreground, primaryColor } = context.theme;
   const { title, messageStart, messageEnd, buttonCaption } = context.locale;
 
+  useEffect(() => {
+    document.title = `${messageStart} ${count} ${messageEnd}`;
+  });
+
   return (
-    <Container background={background} color={color}>
-      <h3>{title}</h3>
-      <p>
+    <Section background={foreground} color={primaryColor}>
+      <Title>{title}</Title>
+      <Message>
         {messageStart} {count} {messageEnd}
-      </p>
-      <button onClick={() => setCount(count + 1)}>{buttonCaption}</button>
-    </Container>
+      </Message>
+      <Button
+        background={primaryColor}
+        color={foreground}
+        onClick={() => setCount(count + 1)}
+      >
+        {buttonCaption}
+      </Button>
+    </Section>
   );
 };
 
