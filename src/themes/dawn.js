@@ -1,4 +1,5 @@
 export default {
-  background: "#225",
-  color: "#fff"
+  background: "#222",
+  foreground: "#225",
+  primaryColor: "#fff"
 };
