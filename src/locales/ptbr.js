@@ -10,5 +10,8 @@ export default {
       theme: "Tema",
       locale: "Idioma"
     }
+  },
+  Focuser: {
+    title: "Focalizador"
   }
 };
