@@ -4,5 +4,11 @@ export default {
     messageStart: "You clicked",
     messageEnd: "times",
     buttonCaption: "Click me"
+  },
+  Dropdown: {
+    label: {
+      theme: "Theme",
+      locale: "Language"
+    }
   }
 };
