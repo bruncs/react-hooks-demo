@@ -12,7 +12,7 @@ import Focuser from "./components/Focuser";
 
 class App extends Component {
   state = {
-    locale: locales.ptbr,
+    locale: locales.en,
     theme: themes.corporate
   };
 
