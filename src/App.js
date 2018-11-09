@@ -8,6 +8,7 @@ import GlobalStyle from "./styles/global";
 
 import Dropdown from "./components/Dropdown";
 import Counter from "./components/Counter";
+import CounterUpDown from "./components/CounterUpDown";
 import Focuser from "./components/Focuser";
 
 class App extends Component {
@@ -39,6 +40,9 @@ class App extends Component {
                         options={{ ...themes }}
                       />
                       <Counter context={{ locale: locale.Counter, theme }} />
+                      <CounterUpDown
+                        context={{ locale: locale.Counter, theme }}
+                      />
                       <Focuser context={{ locale: locale.Focuser, theme }} />
                       <Focuser context={{ locale: locale.Focuser, theme }} />
                     </Fragment>
