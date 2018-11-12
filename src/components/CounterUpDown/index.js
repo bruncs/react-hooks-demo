@@ -14,7 +14,7 @@ const reducer = (state, action) => {
 
 const CounterUpDown = ({ context }) => {
   const { foreground, primaryColor } = context.theme;
-  const { title, messageStart, messageEnd } = context.locale;
+  const { title } = context.locale;
 
   const initialState = { count: 0 };
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -22,9 +22,7 @@ const CounterUpDown = ({ context }) => {
   return (
     <Section background={foreground} color={primaryColor}>
       <Title>{title}</Title>
-      <Message>
-        {messageStart} {state.count} {messageEnd}
-      </Message>
+      <Message>{state.count}</Message>
 
       <Button
         background={primaryColor}
